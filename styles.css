@@ -1,0 +1,49 @@
+td {
+    height: 4em;
+    width: 4em;
+}
+
+table {
+    margin: auto;
+}
+
+h1 {
+    padding-top: 3em;
+    text-align: center;
+}
+
+#box1{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#box2{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#box3{
+    border-bottom: 1px solid black;
+}
+
+#box4{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#box5{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#box6{
+    border-bottom: 1px solid black;
+}
+
+#box7{
+    border-right: 1px solid black;
+}
+
+#box8{
+    border-right: 1px solid black;
+}
