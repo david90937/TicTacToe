@@ -56,13 +56,11 @@ function declareWinner(){
     }
     if (gameWon(oMoves)){
         announceResult("O wins!");
-        reset();
         return;
     }
     // If no winnner, game is a draw.
     else if ((xMoves.length + oMoves.length)== 9){ // checks to see if all 9 squares are filled
         announceResult("Draw!");
-        reset();
         return;
     }
 }
