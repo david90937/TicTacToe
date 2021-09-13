@@ -29,8 +29,8 @@ function onClick() {
 
 function change_player() {
     if (player == "X") {
-        xMoves.push(event.target.id);
         player = "O";
+        xMoves.push(event.target.id);
     }
     else {
         oMoves.push(event.target.id);
@@ -39,12 +39,10 @@ function change_player() {
 }
 
 function gameWon(moves){
-    moves = moves.sort();
     for (let i = 0; i < winningStates.length; i++) {    
         let a = moves.includes(winningStates[i][0]);
         let b = moves.includes(winningStates[i][1]);
         let c = moves.includes(winningStates[i][2]);
-
         if (a && b && c){
             return true;
         }
@@ -53,18 +51,17 @@ function gameWon(moves){
 
 function declareWinner(){
     if (gameWon(xMoves)){
-        alert("X wins!");
-        reset();
+        announceResult("X wins!");
         return;
     }
     if (gameWon(oMoves)){
-        alert("O wins!");
+        announceResult("O wins!");
         reset();
         return;
     }
-        // If no winnner, game is a draw.
+    // If no winnner, game is a draw.
     else if ((xMoves.length + oMoves.length)== 9){ // checks to see if all 9 squares are filled
-        alert("Draw!");
+        announceResult("Draw!");
         reset();
         return;
     }
@@ -78,4 +75,11 @@ function reset() {
     player = "X";
     xMoves = [];
     oMoves = [];
+}
+
+function announceResult(result){
+    setTimeout(_ => {
+        alert(result);
+        reset();
+    }, 0)
 }
